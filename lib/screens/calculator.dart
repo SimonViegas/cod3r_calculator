@@ -9,7 +9,7 @@ class Calculator extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Column(children: const <Widget>[
-        Display('Teste'),
+        Display('123.45'),
         Text('Teclado'),
       ]),
     );
