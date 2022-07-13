@@ -9,11 +9,13 @@ class Button extends StatelessWidget {
   final String text;
   final bool big;
   final Color color;
+  final void Function(String) cb;
 
   const Button({
     required this.text,
     this.big = false,
     this.color = DEFAULT,
+    required this.cb,
     Key? key,
   }) : super(key: key);
 
@@ -21,6 +23,7 @@ class Button extends StatelessWidget {
     required this.text,
     this.big = true,
     this.color = DEFAULT,
+    required this.cb,
     Key? key,
   }) : super(key: key);
 
@@ -28,6 +31,7 @@ class Button extends StatelessWidget {
     required this.text,
     this.big = false,
     this.color = OPERATION,
+    required this.cb,
     Key? key,
   }) : super(key: key);
 
@@ -43,7 +47,7 @@ class Button extends StatelessWidget {
               fontSize: 32,
               fontWeight: FontWeight.w200,
             )),
-        onPressed: () {},
+        onPressed: () => cb(text),
       ),
     );
   }
