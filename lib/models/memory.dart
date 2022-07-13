@@ -1,7 +1,19 @@
 class Memory {
   String _value = '0';
 
-  get value {
+  void aplicarComando(String command) {
+    if (command == 'AC') {
+      limparTudo();
+    } else {
+      _value += command;
+    }
+  }
+
+  void limparTudo() {
+    _value = '0';
+  }
+
+  String get value {
     return _value;
   }
 }
