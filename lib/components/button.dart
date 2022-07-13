@@ -17,6 +17,20 @@ class Button extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+  const Button.big({
+    required this.text,
+    this.big = true,
+    this.color = DEFAULT,
+    Key? key,
+  }) : super(key: key);
+
+  const Button.operation({
+    required this.text,
+    this.big = false,
+    this.color = OPERATION,
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
