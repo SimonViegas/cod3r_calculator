@@ -15,7 +15,7 @@ class _CalculatorState extends State<Calculator> {
 
   _quandoPressionado(String comando) {
     setState(() {
-      memory.aplicarComando(comando);
+      memory.applyCommand(comando);
     });
   }
 

@@ -1,15 +1,15 @@
 class Memory {
   String _value = '0';
 
-  void aplicarComando(String command) {
+  void applyCommand(String command) {
     if (command == 'AC') {
-      limparTudo();
+      _allClear();
     } else {
       _value += command;
     }
   }
 
-  void limparTudo() {
+  void _allClear() {
     _value = '0';
   }
 
